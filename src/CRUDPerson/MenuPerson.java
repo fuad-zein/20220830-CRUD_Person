@@ -23,7 +23,7 @@ public class MenuPerson {
 		PersonManagement hr = new PersonManagement();
 		Person person = new Person();
 
-		// data di awal
+		// data default
 		person.setId(1);
 		person.setName("Muhammad Nazli");
 		person.setAge(23);
@@ -43,7 +43,8 @@ public class MenuPerson {
 					System.out.print("Masukkan id = ");
 					int idPerson = input.nextInt();
 					System.out.print("Masukkan nama = ");
-					String namePer = input.next();
+					input.nextLine();
+					String namePer = input.nextLine();
 					System.out.print("Masukkan umur = ");
 					int agePerson = input.nextInt();
 

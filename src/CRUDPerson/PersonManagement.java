@@ -74,7 +74,8 @@ public class PersonManagement {
 			System.out.print("Masukkan id terbaru = ");
 			int idPerson = input.nextInt();
 			System.out.print("Masukkan nama terbaru = ");
-			String namePerson = input.next();
+			input.nextLine();
+			String namePerson = input.nextLine();
 			System.out.print("Masukkan umur terbaru = ");
 			int agePerson = input.nextInt();
 
