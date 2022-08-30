@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class MenuPerson {
 
-	//create menu
-	public static void menu(){
+	// create menu
+	public static void menu() {
 		System.out.println("====================================");
 		System.out.println("Daftar Menu:");
 		System.out.println("====================================");
@@ -19,16 +19,16 @@ public class MenuPerson {
 		System.out.println("Masukkan menu yang diinginkan: ");
 	}
 
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		PersonManagement hr = new PersonManagement();
 		Person person = new Person();
 
-		//data di awal
+		// data di awal
 		person.setId(1);
 		person.setName("Muhammad Nazli");
 		person.setAge(23);
 
-		//add data
+		// add data
 		hr.add(person);
 
 		Scanner input = new Scanner(System.in);
@@ -38,17 +38,16 @@ public class MenuPerson {
 			menu();
 			option = input.nextInt();
 
-			switch (option){
+			switch (option) {
 				case 1:
 					System.out.print("Masukkan id = ");
 					int idPerson = input.nextInt();
 					System.out.print("Masukkan nama = ");
-					String namePerson = input.nextLine();
-					System.out.println();
+					String namePer = input.next();
 					System.out.print("Masukkan umur = ");
 					int agePerson = input.nextInt();
 
-					person = new Person(idPerson, namePerson, agePerson);
+					person = new Person(idPerson, namePer, agePerson);
 					hr.add(person);
 					System.out.println(person.toString());
 					break;
@@ -70,7 +69,7 @@ public class MenuPerson {
 					System.out.print("Masukkan id = ");
 					int findId = input.nextInt();
 
-					if (!hr.find(findId)){
+					if (!hr.find(findId)) {
 						System.out.println("Data Person tidak ada!!!");
 					}
 					break;
@@ -88,7 +87,6 @@ public class MenuPerson {
 					System.out.println("Input salah...");
 					break;
 			}
-		}
-		while (option !=6);
+		} while (option != 6);
 	}
 }
