@@ -97,7 +97,7 @@ public class PersonManagement {
 
 		// iterasi data list
 		for (Person person : list) {
-			System.out.println(person.toString());
+			System.out.println(person.getId() + ", " + person.getName() + ", " + person.getAge());
 		}
 	}
 }

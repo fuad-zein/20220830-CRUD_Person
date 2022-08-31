@@ -6,6 +6,7 @@ public class MenuPerson {
 
 	// create menu
 	public static void menu() {
+		System.out.println("\n");
 		System.out.println("====================================");
 		System.out.println("Daftar Menu:");
 		System.out.println("====================================");
@@ -37,6 +38,7 @@ public class MenuPerson {
 		do {
 			menu();
 			option = input.nextInt();
+			System.out.println();
 
 			switch (option) {
 				case 1:
@@ -50,7 +52,7 @@ public class MenuPerson {
 
 					person = new Person(idPerson, namePer, agePerson);
 					hr.add(person);
-					System.out.println(person.toString());
+					System.out.println(person.getId() + ", " + person.getName() + ", " + person.getAge());
 					break;
 
 				case 2:
